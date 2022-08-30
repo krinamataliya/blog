@@ -1,6 +1,6 @@
 class Post < ApplicationRecord
     #These validations will be called if the object is saved into db
-   validates:title, presence:true  
-   validates:content,presence:true
+   validates:title, presence:true  #validation for title field
+   validates:content,presence:true #validation for content field
     
 end
