@@ -1,6 +1,8 @@
 class Post < ApplicationRecord
     #These validations will be called if the object is saved into db
-   validates:title, presence:true  #validation for title field
-   validates:content,presence:true #validation for content field
+   #validates:title, presence:true  #validation for title field
+   #validates:content,presence:true #validation for content field
+
+   has_many:comments
     
 end

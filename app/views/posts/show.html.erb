@@ -1,5 +1,4 @@
-<% content_for :page_title, "Blog"%>
-
+<% content_for :page_title, @post.title %>
 <section class="section">
 	<div class="container">
 		<nav class="level">
@@ -27,7 +26,6 @@
 	</div>
 </section>
 
-#Render the comments
 <section class="section comments">
 	<div class="container">
 		<h2 class="subtitle is-5"><strong><%= @post.comments.count %></strong> Comments</h2>
