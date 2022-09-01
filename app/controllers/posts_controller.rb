@@ -42,10 +42,12 @@ class PostsController < ApplicationController
        redirect_to posts_path
 
    end
-   def getByCreationDate
-    @post=Post.where("created_at =?",params[:createdAt])
-    puts @post
-    render :json => @post
+
+   #method to filter a post by title
+   def getByTitle
+    post=Post.where("title =?",params[:createdAt])
+    puts(post)
+    render json:PostSerializer.new(post)
 
    end 
    private
