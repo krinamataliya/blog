@@ -42,7 +42,12 @@ class PostsController < ApplicationController
        redirect_to posts_path
 
    end
+   def getByCreationDate
+    @post=Post.where("created_at =?",params[:createdAt])
+    puts @post
+    render :json => @post
 
+   end 
    private
 
    def post_params
