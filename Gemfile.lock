@@ -63,6 +63,8 @@ GEM
     erubi (1.11.0)
     eventmachine (1.2.7)
     execjs (2.8.1)
+    fast_jsonapi (1.5)
+      activesupport (>= 4.2)
     ffi (1.15.5)
     formatador (1.1.0)
     globalid (0.4.2)
@@ -203,6 +205,7 @@ DEPENDENCIES
   better_errors (~> 2.4)
   bulma-rails (~> 0.6.1)
   coffee-rails (~> 4.2)
+  fast_jsonapi
   guard (~> 2.14, >= 2.14.1)
   guard-livereload (~> 2.5, >= 2.5.2)
   jbuilder (~> 2.5)
