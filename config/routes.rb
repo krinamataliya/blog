@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   	resources :comments
   end
 
+  get '/posts/:id/:createdAt' , to:'posts#getByCreationDate'
   root 'posts#index'
 end
