@@ -23,3 +23,5 @@ Associations
 To serialize the data:
 
 fast api, serialization, 
+
+rails g serializer Post   (define the attributes you wish to serialize in the serializer class)
