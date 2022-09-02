@@ -36,4 +36,25 @@ Blog::Application.configure do
   config.assets.debug = true
 
   # config.active_record.whitelist_attributes = false
+
+  #To confugure smtp server
+config.action_mailer.delivery_method = :smtp
+config.action_mailer.perform_deliveries = true
+config.action_mailer.raise_delivery_errors = true
+host = 'localhost:3000' #replace with your own url
+config.action_mailer.default_url_options = { host: host }
+
+#Enabling SMTP config
+
+config.action_mailer.smtp_settings = {
+    address:              "smtp.gmail.com",
+    port:                 587,
+    user_name:            "enter your email here",
+    password:             "enter your password",
+    authentication:       "plain",
+    enable_starttls_auto: true  
+ }
+
+#Enabled this as html view for email is created
+# ActionMailer::Base.set_content_type = "text/html"
 end
