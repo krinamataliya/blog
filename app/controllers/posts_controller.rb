@@ -12,7 +12,8 @@ class PostsController < ApplicationController
        @post = Post.new(post_params)
 
        if @post.save
-           redirect_to @post
+            PostMailer.post_creation_mail(@post.email_id)
+            redirect_to @post
        else
            render 'new'
        end
@@ -53,7 +54,7 @@ class PostsController < ApplicationController
    private
 
    def post_params
-       params.require(:post).permit(:title, :content)
+       params.require(:post).permit(:title, :content, :email_id)
    end
 
    # def find_post
