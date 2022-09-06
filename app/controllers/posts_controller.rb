@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
    
    def index
-       @posts = Post.all.order("created_at DESC")
+       @posts = Post.where("user_id=?",params[:user_id]).order("created_at DESC")
    end
 
    def new
@@ -46,7 +46,8 @@ class PostsController < ApplicationController
 
    #method to filter a post by title
    def getByTitle
-    post=Post.where("title =?",params[:createdAt])
+    post=Post.where("title =?",params[:title])
+    #change the param
     puts(post)
     render json:PostSerializer.new(post)
 

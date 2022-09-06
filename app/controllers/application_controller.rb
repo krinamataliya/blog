@@ -1,3 +1,3 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery
+  #skip_before_action with: :exception
 end

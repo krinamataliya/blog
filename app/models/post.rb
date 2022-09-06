@@ -3,6 +3,7 @@ class Post < ApplicationRecord
    #validates:title, presence:true  #validation for title field
    #validates:content,presence:true #validation for content field
 
+   
+   belongs_to :user
    has_many:comments
-    
 end
